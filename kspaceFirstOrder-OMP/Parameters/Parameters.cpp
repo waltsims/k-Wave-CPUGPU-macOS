@@ -677,7 +677,7 @@ std::string Parameters::getProcessorName() const
   {
     // Linux or macOS build
     // #ifdef __linux__
-    #if defined(__linux__) || defined (__APPLE__)
+    #if defined(__linux__) //|| defined (__APPLE__)
       asm volatile
         ("cpuid"
           : "=a" (regs[0]),

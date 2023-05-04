@@ -47,7 +47,11 @@
   #include <omp.h>
 #endif
 
+#ifdef __x86_64__
 #include <immintrin.h>
+#else
+#include "sse2neon.h"
+#endif
 #include <cmath>
 #include <ctime>
 #include <limits>

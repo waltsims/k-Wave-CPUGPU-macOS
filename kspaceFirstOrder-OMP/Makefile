@@ -130,7 +130,7 @@ GIT_HASH       = -D__KWAVE_GIT_HASH__=\"0ba023063e3f29685e1e346f56883378d961f9f1
 ifeq ($(COMPILER), GNU)
   # Compiler name
   #CXX			= g++
-  CXX       = g++-9
+  CXX       = g++-13
 
   # C++ standard
   CPP_STD   = -std=c++11
@@ -155,7 +155,7 @@ ifeq ($(COMPILER), GNU)
 
   # Default is native - the max performance for this CPU
   else
-    CPU_FLAGS = -m64 -march=native -mtune=native
+    CPU_FLAGS = -m64 -march=native -mtune=native -mmacosx-version-min=13.0
   endif
 
   # Use maximum optimization

@@ -29,7 +29,11 @@
  * If not, see [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
  */
 
+#ifdef __x86_64__
 #include <immintrin.h>
+#else
+#include "sse2neon.h"
+#endif
 #include <assert.h>
 
 #include <MatrixClasses/BaseFloatMatrix.h>
